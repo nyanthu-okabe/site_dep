@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <style>
+            input[type="text"],
+            input[type="button"] {
+                background-color: #ffffff;
+                border: 1px solid #ccc;
+                padding: 8px 15px;
+                cursor: pointer;
+                font-weight: bold;
+                margin-right: 5px;
+                transition: 0.15s;
+            }
+            input[type="checkbox"] {
+                display: none;
+            }
+
+            .checkbox-img {
+                width: 40px;
+                height: 40px;
+                cursor: pointer;
+                border: 2px solid transparent;
+                transition: border-color 0.2s;
+            }
+
+            #auth:checked + .checkbox-label .checkbox-img {
+                border-color: #2196f3;
+            }
+
+            #auth:checked ~ .auth-content {
+                display: block;
+            }
+
+            .auth-content {
+                display: none;
+                margin-top: 10px;
+                border-top: 1px solid #ccc;
+                padding-top: 5px;
+            }
+
+            .checkbox-label {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="checkbox-container" style="border: 1px solid #ccc" id="au">
+            <input id="auth" type="checkbox" />
+            <label for="auth" class="checkbox-label">
+                <img
+                    class="checkbox-img"
+                    src="https://www.nyanthu.com/favicon2.png"
+                    alt="checkbox image"
+                />
+                <span> N Authenticate</span>
+            </label>
+            <div class="auth-content">
+                <p>Set Low ~ High</p>
+                <a>0</a
+                ><input
+                    min="0.00"
+                    max="100.00"
+                    type="range"
+                    step="0.01"
+                    value="0"
+                    id="slider"
+                /><a>100</a><br />
+                <input type="button" value="complete" onclick="comp();" />
+            </div>
+        </div>
+    </body>
+    <script>
+        function comp() {
+            document.getElementById("au").style.display = "none";
+            document.write(document.getElementById("slider").value);
+        }
+    </script>
+</html>

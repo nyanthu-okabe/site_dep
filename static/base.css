@@ -178,8 +178,7 @@ img {
     position: relative;
     display: inline-block;
     /*text-align: right;*/
-    margin: 10px 0;
-    border-color: #0068b7;
+    /*border-color: #1d2088;*/
 }
 
 .avatar {

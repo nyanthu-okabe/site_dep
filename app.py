@@ -15,7 +15,7 @@ def show(page):
     try:
         return render_template(f"{page}/index.html", user=user)
     except:
-        return render_template("404.html"), 404
+        return render_template("404.html", user=user), 404
 
 
 @app.route("/static/<path:path>")
@@ -25,8 +25,9 @@ def send_static(path):
 
 @app.errorhandler(404)
 def page_not_found(e):
-    return render_template("404.html"), 404
+    user = {"activate": True, "name": "Okabe"}
+    return render_template("404.html", user=user), 404
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)

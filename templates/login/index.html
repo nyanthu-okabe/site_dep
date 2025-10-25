@@ -1,0 +1,15 @@
+{% extends "base.html" %} {% block content %}
+<section id="donate">
+    <h2>Login</h2>
+    <p>Login to access our services</p>
+
+    <form method="POST" action="/login">
+        <input type="text" placeholder="username" id="username" /><br />
+        <input
+            type="password"
+            placeholder="password"
+            id="password"
+        /><br /><input type="submit" value="Login" />
+    </form>
+</section>
+{% endblock %}

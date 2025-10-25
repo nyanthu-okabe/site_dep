@@ -147,35 +147,39 @@
                     <input type="button" value="Docs" data-target="docs" />
                     <input type="button" value="Policy" data-target="policy" />
                     <!-- <input type="button" value="Donate" data-target="donate" /> -->
-                    <input
+                    <!--<input
                         class="donateBtn"
                         type="button"
                         value="Donate"
                         data-target="donate"
-                    />
+                    />-->
                     {% if user.activate %}
                     <div class="account-nav">
-                        <input type="button" value="{{ user.name }}" />
+                        <input
+                            type="button"
+                            value="{{ user.name }}"
+                            style="border-color: #1d2088"
+                        />
                         <ul class="dropdown">
                             <li>
                                 <input
                                     type="button"
                                     value="Profile"
-                                    data-redirect="/profile"
+                                    data-redirect="profile"
                                 />
                             </li>
                             <li>
                                 <input
                                     type="button"
                                     value="Settings"
-                                    data-redirect="/settings"
+                                    data-redirect="settings"
                                 />
                             </li>
                             <li>
                                 <input
                                     type="button"
                                     value="Dark"
-                                    data-redirect="/my-threads"
+                                    data-redirect="my-threads"
                                 />
                             </li>
                             <li class="divider">
@@ -189,7 +193,7 @@
                     </div>
                     {% else %}
                     <input
-                        style="border-color: #0068b7"
+                        style="border-color: #1d2088"
                         type="button"
                         value="Login"
                         data-target="login"
