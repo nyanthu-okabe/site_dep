@@ -194,13 +194,13 @@ img {
     display: none;
     position: absolute;
     top: 100%;
-    right: 0;
+    left: 0;
     /*background-color: #f0f0f0; /* formの背景色をコピー */
     /*border: 1px solid #cccccc; /* formのボーダーをコピー */
     list-style: none;
     padding: 0;
     margin: 0;
-    min-width: 0px;
+    min-width: 100%;
     z-index: 1000;
 }
 
@@ -220,4 +220,9 @@ img {
 
 .dropdown .divider a {
     margin-top: 5px; /* dividerの上に余白 */
+}
+.dropdown input {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
 }
