@@ -173,3 +173,51 @@ img {
         display: inline-block;
     }
 }
+/* account */
+.account-nav {
+    position: relative;
+    display: inline-block;
+    /*text-align: right;*/
+    margin: 10px 0;
+    border-color: #0068b7;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    /*background-color: #f0f0f0; /* formの背景色をコピー */
+    /*border: 1px solid #cccccc; /* formのボーダーをコピー */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 0px;
+    z-index: 1000;
+}
+
+.account-nav:hover .dropdown {
+    display: block; /* ホバーで表示 */
+}
+
+.dropdown li {
+    border-bottom: none; /* 不要なボーダーを削除 */
+}
+
+/* dividerクラスのスタイル */
+.dropdown .divider {
+    /*border-top: 1px solid #cccccc; /* Scratch風の区切り線 */
+    margin: 5px 0;
+}
+
+.dropdown .divider a {
+    margin-top: 5px; /* dividerの上に余白 */
+}

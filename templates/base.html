@@ -153,6 +153,48 @@
                         value="Donate"
                         data-target="donate"
                     />
+                    {% if user.activate %}
+                    <div class="account-nav">
+                        <input type="button" value="{{ user.name }}" />
+                        <ul class="dropdown">
+                            <li>
+                                <input
+                                    type="button"
+                                    value="Profile"
+                                    data-redirect="/profile"
+                                />
+                            </li>
+                            <li>
+                                <input
+                                    type="button"
+                                    value="Settings"
+                                    data-redirect="/settings"
+                                />
+                            </li>
+                            <li>
+                                <input
+                                    type="button"
+                                    value="Dark"
+                                    data-redirect="/my-threads"
+                                />
+                            </li>
+                            <li class="divider">
+                                <input
+                                    type="button"
+                                    value="Logout"
+                                    data-redirect="logout"
+                                />
+                            </li>
+                        </ul>
+                    </div>
+                    {% else %}
+                    <input
+                        style="border-color: #0068b7"
+                        type="button"
+                        value="Login"
+                        data-target="login"
+                    />
+                    {% endif %}
                 </div>
             </div>
 
