@@ -1,8 +1,4 @@
-import { App } from "fresh";
-import { Layout } from "./routes/_app.tsx";
+import { start } from "$fresh/server.ts";
+import manifest from "./fresh.gen.ts";
 
-export const app = new App();
-
-app.layout(Layout);
-
-app.fsRoutes();
+await start(manifest, { render: (ctx, render) => render() });

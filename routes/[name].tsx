@@ -17,13 +17,13 @@ export const handler: Handlers = {
   GET(_req, ctx) {
     const { name } = ctx.params;
     const Component = pages[name];
-    const user = { activate: true, name: "John Doe" };
+    //const user = { activate: true, name: "John Doe" };
 
     if (!Component) {
       return ctx.renderNotFound();
     }
 
-    return ctx.render({ user, Component });
+    return ctx.render({ /*user,*/ Component });
   },
 };
 

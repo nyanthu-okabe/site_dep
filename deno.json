@@ -10,6 +10,7 @@
   },
   "imports": {
     "$fresh/": "https://deno.land/x/fresh@1.6.8/",
+    "fresh": "npm:fresh@^0.5.2",
     "preact": "https://esm.sh/preact@10.19.6",
     "preact/": "https://esm.sh/preact@10.19.6/",
     "@preact/signals": "https://esm.sh/*@preact/signals@1.2.2",

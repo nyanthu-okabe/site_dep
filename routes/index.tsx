@@ -2,8 +2,10 @@ import { Handlers, PageProps } from "$fresh/server.ts";
 
 export const handler: Handlers = {
   GET(_req, ctx) {
-    const user = { activate: false, name: "John Doe" };
-    return ctx.render({ user });
+    //const user = { activate: false, name: "John Doe" };
+    return ctx.render({
+      /*user*/
+    });
   },
 };
 
@@ -14,12 +16,15 @@ export default function Home({ data }: PageProps) {
       <p>
         <em>"Providing interaction and happiness across borders."</em>
       </p>
-      <a href="/donate" class="donateBtn">
-        Donate to Nyanthu
-      </a>
+      <input
+        type="button"
+        value="Policy to Nyanthu"
+        data-target="policy"
+        class="donateBtn"
+      />
       <p>
-        Nyanthu is a software development group experienced in technologies ranging
-        from low-level BGFX and C++ to Godot and 3D development.
+        Nyanthu is a software development group experienced in technologies
+        ranging from low-level BGFX and C++ to Godot and 3D development.
       </p>
       <p>
         <strong>Terms of Use:</strong> Provided by Nyanthu. Use at your own
