@@ -3,15 +3,16 @@ export default function Donate() {
     <section id="donate">
       <h2>Donate</h2>
       <p>Your support helps us keep our servers and projects running!</p>
-      <a
-        href="https://www.amazon.jp/hz/wishlist/ls/2X7F14KM6QMLC?ref_=wl_share"
+      <button
         class="donateBtn"
-        target="_blank"
-        rel="noopener"
+        onclick="window.open('https://www.amazon.jp/hz/wishlist/ls/2X7F14KM6QMLC?ref_=wl_share', '_blank')"
       >
         Donate
-      </a>
-      <span>to <strong>Nyanthu</strong></span>
+      </button>
+
+      <span>
+        to <strong>Nyanthu</strong>
+      </span>
     </section>
   );
 }

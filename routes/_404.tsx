@@ -14,12 +14,7 @@ export default function NotFoundPage({ url }: UnknownPageProps) {
             The page you were trying to visit (<strong>{url.pathname}</strong>)
             does not exist.
           </p>
-          <input
-            type="button"
-            class="underline"
-            value="Go back home"
-            data-target=""
-          />
+          <button onClick="location.href = '/'">Go back home</button>
         </div>
       </div>
     </>

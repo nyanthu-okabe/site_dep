@@ -18,8 +18,8 @@ export default function Home({ data }: PageProps) {
       </p>
       <input
         type="button"
-        value="Policy to Nyanthu"
-        data-target="policy"
+        value="Donate to Nyanthu"
+        data-target="donate"
         class="donateBtn"
       />
       <p>
