@@ -1,4 +1,4 @@
-import { defineManifest } from "$fresh/server.ts";
+import { defineManifest } from "$fresh/core/mod.ts";
 import * as $name from "./routes/[name].tsx";
 import * as $index from "./routes/index.tsx";
 import * as $app from "./routes/_app.tsx";
