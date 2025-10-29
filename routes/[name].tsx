@@ -1,32 +1,33 @@
 import { Handlers, PageProps } from "$fresh/server.ts";
-import { asset } from "$fresh/runtime.ts";
+import Apps from "../islands/apps.tsx";
+import Docs from "../islands/docs.tsx";
+import Donate from "../islands/donate.tsx";
+import Policy from "../islands/policy.tsx";
+import Sites from "../islands/sites.tsx";
+
+const pages: Record<string, any> = {
+  apps: Apps,
+  docs: Docs,
+  donate: Donate,
+  policy: Policy,
+  sites: Sites,
+};
 
 export const handler: Handlers = {
-  async GET(_req, ctx) {
+  GET(_req, ctx) {
     const { name } = ctx.params;
+    const Component = pages[name];
     const user = { activate: true, name: "John Doe" };
 
-    try {
-      const Component = (await import(`../islands/${name}.tsx`)).default;
-      return ctx.render({ user, Component });
-    } catch (error) {
-      return ctx.renderNotFound({ user });
+    if (!Component) {
+      return ctx.renderNotFound();
     }
+
+    return ctx.render({ user, Component });
   },
 };
 
 export default function DynamicPage({ data }: PageProps) {
-  const { user, Component } = data;
-
-  if (!Component) {
-    return (
-      <div class="container">
-        <h1>404 - Page Not Found</h1>
-        <p>The page you are looking for does not exist.</p>
-        <a href="/">Go back to Home</a>
-      </div>
-    );
-  }
-
+  const { Component } = data;
   return <Component />;
 }

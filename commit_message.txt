@@ -1,8 +1,0 @@
-feat: Migrate project to Fresh and Deno
-
-This commit migrates the project from a Python Flask application to a Fresh and Deno application.
-
-- The project has been restructured to use Fresh's file-based routing.
-- The Flask templates have been converted to Preact components.
-- The application logic has been moved to Fresh routes and handlers.
-- The project is now ready for deployment on Deno Deploy.
