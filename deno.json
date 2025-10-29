@@ -19,5 +19,9 @@
     "tailwindcss/": "npm:/tailwindcss@3.4.1/",
     "$std/": "https://deno.land/std@0.224.0/"
   },
-  "nodeModulesDir": true
+  "nodeModulesDir": "auto",
+  "deploy": {
+    "org": "nyanthu-okabe",
+    "app": "cold-cobra-21"
+  }
 }

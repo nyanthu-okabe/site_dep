@@ -1,3 +1,3 @@
-import { dev } from "$fresh/dev.ts";
+import dev from "$fresh/dev.ts";
 
 await dev(import.meta.url, "./main.ts");
