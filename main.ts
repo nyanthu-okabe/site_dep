@@ -1,4 +1,8 @@
-import { start } from "$fresh/server.ts";
-import manifest from "./fresh.gen.ts";
+import { App } from "fresh";
+import { Layout } from "./routes/_app.tsx";
 
-await start(manifest);
+export const app = new App();
+
+app.layout(Layout);
+
+app.fsRoutes();
