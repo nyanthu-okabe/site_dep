@@ -169,31 +169,9 @@ export default function App({ Component, state }: PageProps) {
           <footer>
             <p>© 2025 Nyanthu. All rights reserved.</p>
           </footer>
-          <button
-            id="open"
-            onclick="openBot()"
-            style="position:fixed;bottom:0px;right:0px;width:30%;z-index:3;"
-          >
-            OpenBot
-          </button>
-
-          <button
-            id="close"
-            onclick="closeBot()"
-            style="position:absolute;bottom:60%;right:0;width:30%;z-index:3;"
-          >
-            CloseBot
-          </button>
-
-          <iframe
-            id="bot"
-            src="https://nyanthubot.nyanthu.com"
-            style="position:absolute;bottom:0;right:0;width:30%;height:60%;border:none;z-index:2;background-color:#fff;"
-            title="Nyanthu Bot"
-          ></iframe>
         </div>
 
-        {/* <script
+        <script
           dangerouslySetInnerHTML={{
             __html: `
         document.addEventListener("DOMContentLoaded", function () {
@@ -233,23 +211,9 @@ export default function App({ Component, state }: PageProps) {
                     loadPage("");
                 }
             });
-        });
-        function closeBot() {
-          document.getElementById('close').style.display = 'none';
-          document.getElementById('open').style.display = 'block';
-          document.getElementById('bot').style.display = 'none';
-        }
-
-        function openBot() {
-          document.getElementById('open').style.display = 'none';
-          document.getElementById('close').style.display = 'block';
-          document.getElementById('bot').style.display = 'block';
-        }
-
-        window.onload = closeBot;
-    `,
+        });`,
           }}
-        /> */}
+        />
       </body>
     </html>
   );
