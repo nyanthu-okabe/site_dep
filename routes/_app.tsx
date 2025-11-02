@@ -144,6 +144,7 @@ export default function App({ Component, state }: PageProps) {
               <input type="button" value="Apps" data-target="apps" />
               <input type="button" value="Docs" data-target="docs" />
               <input type="button" value="Policy" data-target="policy" />
+              <input type="button" value="Bot" data-target="chatbot" />
               {/* <input type="button" value="Donate" data-target="donate" /> */}
               {/*<input
                           class="donateBtn"
@@ -192,7 +193,7 @@ export default function App({ Component, state }: PageProps) {
           ></iframe>
         </div>
 
-        <script
+        {/* <script
           dangerouslySetInnerHTML={{
             __html: `
         document.addEventListener("DOMContentLoaded", function () {
@@ -248,7 +249,7 @@ export default function App({ Component, state }: PageProps) {
         window.onload = closeBot;
     `,
           }}
-        />
+        /> */}
       </body>
     </html>
   );
