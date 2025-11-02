@@ -4,6 +4,7 @@ import Docs from "../islands/docs.tsx";
 import Donate from "../islands/donate.tsx";
 import Policy from "../islands/policy.tsx";
 import Sites from "../islands/sites.tsx";
+import Chatbot from "../islands/chatbot.tsx";
 
 const pages: Record<string, any> = {
   apps: Apps,
@@ -11,6 +12,7 @@ const pages: Record<string, any> = {
   donate: Donate,
   policy: Policy,
   sites: Sites,
+  chatbot: Chatbot,
 };
 
 export const handler: Handlers = {
