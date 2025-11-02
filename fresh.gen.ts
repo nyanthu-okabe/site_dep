@@ -11,6 +11,7 @@ import * as $$1 from "./islands/docs.tsx";
 import * as $$2 from "./islands/donate.tsx";
 import * as $$3 from "./islands/policy.tsx";
 import * as $$4 from "./islands/sites.tsx";
+import * as $$5 from "./islands/chatbot.tsx";
 import { Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -26,6 +27,7 @@ const manifest = {
     "./islands/donate.tsx": $$2,
     "./islands/policy.tsx": $$3,
     "./islands/sites.tsx": $$4,
+    "./islands/chatbot.tsx": $$5,
   },
   baseUrl: import.meta.url,
 };
